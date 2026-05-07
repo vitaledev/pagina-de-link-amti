@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netcare Soluções | Links</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Configuração de Cores Personalizadas no Tailwind para bater com a marca -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        netcare: {
+                            blue: '#003B73',        /* Azul Corporativo (Primária) */
+                            blueLight: '#00AEEF',   /* Azul Claro/Ciano (Apoio) */
+                            white: '#FFFFFF',       /* Branco */
+                            grayLight: '#F4F6F9',   /* Cinza Claro (Off-white) */
+                            grayDark: '#0F0F0F',    /* Preto/Cinza Escuro */
+                            dark: '#0F0F0F',        /* Alias para fundos escuros */
+                            charcoal: '#333333'     /* Chumbo Escuro */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F4F6F9; /* Fundo claro institucional */
+            color: #333333;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Animações de entrada */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        /* Estilos Premium: Accordion e Animações */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        @keyframes shine {
+            100% { left: 125%; }
+        }
+
+    </style>
+</head>
+<body class="min-h-screen relative flex items-center justify-center p-4">
+
+    <!-- Container Principal -->
+    <main class="w-full max-w-[420px] flex flex-col items-center z-10 py-4 relative">
+        
+        <!-- Botão de Partilha (Premium) -->
+        <button onclick="shareProfile()" class="absolute top-6 right-4 w-10 h-10 rounded-full bg-white shadow-sm border border-netcare-blue/10 flex items-center justify-center text-netcare-charcoal hover:text-netcare-blue hover:border-netcare-blue/30 transition-all z-20" title="Partilhar">
+            <i class="ph ph-share-network text-xl"></i>
+        </button>
+
+        <!-- Header / Logo -->
+        <header class="flex flex-col items-center text-center mb-0 fade-in-up mt-0">
+            <div class="p-0 mb-0 relative group">
+                <div class="absolute inset-0 bg-netcare-blue/5 rounded-full scale-220 opacity-0 group-hover:opacity-100 transition-opacity blur-md"></div>
+                <img 
+                    src="https://files.catbox.moe/lit0kr.png" 
+                    alt="AMTI Logo" 
+                    class="h-60 object-contain relative z-20"
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/ffffff/4A148C?text=AMTI';"
+                >
+            </div>
+        </header>
+
+        <!-- Redes Sociais (Ícones Menores) -->
+        <div class="grid grid-cols-4 gap-4 mb-8 fade-in-up delay-1 place-items-center w-full max-w-[280px] mx-auto">
+            <a href="https://www.instagram.com/amtidatacenter?igsh=ZHpjOGRhbHo5NDh4" target="_blank" class="w-12 h-12 rounded-full bg-white shadow-sm border border-netcare-blue/10 flex items-center justify-center text-netcare-blue hover:text-white hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-400 hover:border-transparent hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <i class="ph ph-instagram-logo text-2xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/amticloud/" target="_blank" class="w-12 h-12 rounded-full bg-white shadow-sm border border-netcare-blue/10 flex items-center justify-center text-netcare-blue hover:text-white hover:bg-[#0077b5] hover:border-transparent hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <i class="ph ph-linkedin-logo text-2xl"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61587622949212" target="_blank" class="w-12 h-12 rounded-full bg-white shadow-sm border border-netcare-blue/10 flex items-center justify-center text-netcare-blue hover:text-white hover:bg-[#1877F2] hover:border-transparent hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <i class="ph ph-facebook-logo text-2xl"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC4_GM5nHEkwXpXbnfapCFBA" target="_blank" class="w-12 h-12 rounded-full bg-white shadow-sm border border-netcare-blue/10 flex items-center justify-center text-netcare-blue hover:text-white hover:bg-[#FF0000] hover:border-transparent hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <i class="ph ph-youtube-logo text-2xl"></i>
+            </a>
+        </div>
+
+        <!-- Links Principais -->
+        <div class="w-full max-w-[380px] grid grid-cols-1 gap-4 px-2 mx-auto">
+            
+            <!-- 1. Website -->
+            <a href="https://amti.com.br/" target="_blank" 
+               class="fade-in-up delay-2 group flex items-center justify-between p-4 bg-white border border-netcare-blue/10 shadow-sm rounded-2xl hover:border-netcare-blue/30 hover:shadow-md transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-netcare-blue/5 text-netcare-blue group-hover:bg-netcare-blue group-hover:text-white transition-colors">
+                        <i class="ph ph-globe text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-netcare-charcoal group-hover:text-netcare-blue tracking-wide text-left">Acesse nosso Site</span>
+                </div>
+                <i class="ph-bold ph-caret-right text-netcare-blue/30 group-hover:text-netcare-blue transition-all"></i>
+            </a>
+
+            <!-- 2. Menu Expansível: Nossos Serviços -->
+            <div class="fade-in-up delay-3 w-full border border-netcare-blue/10 bg-white rounded-2xl overflow-hidden shadow-sm hover:border-netcare-blue/30 transition-colors" id="solutionsAccordion">
+                <button onclick="toggleAccordion('solutionsAccordion')" class="w-full flex items-center justify-between p-4 group">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-netcare-blue/5 text-netcare-blue transition-colors">
+                            <i class="ph ph-squares-four text-2xl"></i>
+                        </div>
+                        <span class="font-bold text-netcare-charcoal group-hover:text-netcare-blue tracking-wide text-left">Nossos Serviços</span>
+                    </div>
+                    <i class="ph-bold ph-caret-down text-netcare-blue/30 accordion-icon group-hover:text-netcare-blue transition-transform"></i>
+                </button>
+                <div class="accordion-content bg-netcare-grayLight border-t border-netcare-blue/10">
+                    <div class="p-4 space-y-4">
+                        <p class="text-sm text-netcare-charcoal leading-relaxed">
+                            
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="rounded-2xl border border-netcare-blue/10 bg-white p-4 shadow-sm">
+                                <p class="text-xs uppercase tracking-[0.32em] font-semibold text-netcare-blueLight mb-2">AMTI - Inteligência em TI</p>
+                                <h4 class="text-base font-bold text-netcare-charcoal leading-snug">Segurança da Informação</h4>
+                                <p class="text-sm text-netcare-charcoal leading-relaxed mt-2">
+                                    Soluções que levam robustez à segurança do seu negócio, como serviços de datacenter o-location, datacenter híbrido, cloud computing, edge computing e backup corporativo, contando com as mais severas certificações de cibersegurança do mundo.
+                                </p>
+                                <a href="https://amti.com.br/" target="_blank" class="inline-flex items-center gap-2 mt-3 text-netcare-blue font-semibold hover:text-netcare-blueLight">
+                                    Saiba mais
+                                    <i class="ph ph-arrow-right text-lg"></i>
+                                </a>
+                            </div>
+                            <div class="rounded-2xl border border-netcare-blue/10 bg-white p-4 shadow-sm">
+                                <p class="text-xs uppercase tracking-[0.32em] font-semibold text-netcare-blueLight mb-2">AMTI - Inteligência em TI</p>
+                                <h4 class="text-base font-bold text-netcare-charcoal leading-snug">Engenharia de Disponibilidade</h4>
+                                <p class="text-sm text-netcare-charcoal leading-relaxed mt-2">
+                                    Somos pioneiros na oferta de soluções de computação de borda (ou edge computing) desde 2017. Com nossas soluções, os clientes não precisam se preocupar com as questões entre nuvem e computação local: ofertamos o melhor dos 2 mundos.
+                                </p>
+                                <a href="https://amti.com.br/" target="_blank" class="inline-flex items-center gap-2 mt-3 text-netcare-blue font-semibold hover:text-netcare-blueLight">
+                                    Saiba mais
+                                    <i class="ph ph-arrow-right text-lg"></i>
+                                </a>
+                            </div>
+                            <div class="rounded-2xl border border-netcare-blue/10 bg-white p-4 shadow-sm">
+                                <p class="text-xs uppercase tracking-[0.32em] font-semibold text-netcare-blueLight mb-2">AMTI - Inteligência em TI</p>
+                                <h4 class="text-base font-bold text-netcare-charcoal leading-snug">Cloud Performance e Segurança</h4>
+                                <p class="text-sm text-netcare-charcoal leading-relaxed mt-2">
+                                    Oferecemos soluções tecnológicas com um único objetivo final: a paz de que tudo seguirá funcionando com performance e segurança. Serviços de Datacenter, Datacenter Híbrido, Software Defined Datacenter, Cloud, Edge Computing e Backup Corporativo.
+                                </p>
+                                <a href="https://amti.com.br/" target="_blank" class="inline-flex items-center gap-2 mt-3 text-netcare-blue font-semibold hover:text-netcare-blueLight">
+                                    Saiba mais
+                                    <i class="ph ph-arrow-right text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Trabalhe Conosco (Aba / Modal) -->
+            <button onclick="openModal()" 
+               class="fade-in-up delay-4 group flex items-center justify-between p-4 bg-white border border-netcare-blue/10 shadow-sm rounded-2xl hover:border-netcare-blue/30 hover:shadow-md transition-all duration-300 w-full text-left">
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-netcare-blue/5 text-netcare-blue group-hover:bg-netcare-blue group-hover:text-white transition-colors">
+                        <i class="ph ph-briefcase text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-netcare-charcoal group-hover:text-netcare-blue tracking-wide text-left">Trabalhe Conosco</span>
+                </div>
+                <i class="ph-bold ph-caret-right text-netcare-blue/30 group-hover:text-netcare-blue transition-all"></i>
+            </button>
+
+            <!-- 4. WhatsApp (Fale com um Especialista) -->
+            <a href="https://api.whatsapp.com/send?phone=554432002103&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" 
+               class="fade-in-up delay-5 group relative overflow-hidden flex items-center justify-between p-4 bg-netcare-blue rounded-2xl hover:brightness-95 hover:shadow-[0_8px_25px_rgba(0,59,115,0.35)] hover:-translate-y-0.5 transition-all duration-300">
+                <!-- Efeito de brilho animado -->
+                <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-[shine_1.5s]"></div>
+                
+                <div class="flex items-center gap-4 relative z-10">
+                    <div class="flex items-center justify-center w-12 h-12 shrink-0 bg-white/10 rounded-full">
+                        <i class="ph-fill ph-whatsapp-logo text-2xl text-white"></i>
+                    </div>
+                    <span class="font-bold text-white text-lg tracking-wide text-left">Fale com um Especialista</span>
+                </div>
+                <div class="relative z-10 flex items-center justify-center w-8 h-8 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
+                    <i class="ph-bold ph-caret-right text-white"></i>
+                </div>
+            </a>
+            
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center fade-in-up delay-5">
+            <p class="text-xs text-netcare-blueLight/80 font-medium">
+                © 2026 Netcare Soluções. Todos os direitos reservados.
+            </p>
+        </footer>
+    </main>
+
+    <!-- MODAL TRABALHE CONOSCO -->
+    <div id="jobModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-netcare-grayDark/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        
+        <!-- Conteúdo do Modal (Light Theme para combinar com a nova identidade) -->
+        <div id="jobModalContent" class="bg-white border border-netcare-blue/10 p-6 sm:p-8 rounded-[2rem] w-full max-w-md transform scale-95 transition-transform duration-300 relative shadow-2xl overflow-y-auto max-h-[90vh]">
+            
+            <!-- Botão Fechar -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center rounded-full bg-netcare-grayLight text-netcare-charcoal hover:text-netcare-blue hover:bg-netcare-blue/10 transition-colors">
+                <i class="ph-bold ph-x text-lg"></i>
+            </button>
+
+            <!-- Cabeçalho do Form -->
+            <div class="mb-6 pr-8">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-netcare-blueLight to-netcare-blue flex items-center justify-center mb-4 shadow-lg shadow-netcare-blue/20">
+                    <i class="ph ph-rocket-launch text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-netcare-blue tracking-tight mb-2">Faça parte do time</h3>
+                <p class="text-netcare-charcoal text-sm leading-relaxed">
+                    Estamos sempre em busca de novos talentos para revolucionar a telecomunicação conosco. Envie suas informações.
+                </p>
+            </div>
+
+            <!-- Formulário -->
+            <form id="jobForm" onsubmit="submitJobForm(event)" class="grid grid-cols-1 gap-4">
+                
+                <div class="space-y-1">
+                        <label class="text-xs text-netcare-charcoal font-bold uppercase tracking-wider pl-1" for="fullName">Nome Completo</label>
+                        <input id="fullName" name="fullName" type="text" placeholder="Ex: João Silva" required
+                            class="w-full bg-netcare-grayLight border border-netcare-blue/10 rounded-xl p-3.5 text-netcare-charcoal text-sm focus:outline-none focus:border-netcare-blue focus:ring-1 focus:ring-netcare-blue transition-all placeholder:text-slate-400">
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-xs text-netcare-charcoal font-bold uppercase tracking-wider pl-1" for="email">E-mail Profissional</label>
+                    <input id="email" name="email" type="email" placeholder="joao@exemplo.com" required
+                        class="w-full bg-netcare-grayLight border border-netcare-blue/10 rounded-xl p-3.5 text-netcare-charcoal text-sm focus:outline-none focus:border-netcare-blue focus:ring-1 focus:ring-netcare-blue transition-all placeholder:text-slate-400">
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-xs text-netcare-charcoal font-bold uppercase tracking-wider pl-1" for="linkedin">Perfil do LinkedIn (Opcional)</label>
+                    <input id="linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/..."
+                        class="w-full bg-netcare-grayLight border border-netcare-blue/10 rounded-xl p-3.5 text-netcare-charcoal text-sm focus:outline-none focus:border-netcare-blue focus:ring-1 focus:ring-netcare-blue transition-all placeholder:text-slate-400">
+                </div>
+                
+                <div class="space-y-1">
+                    <label class="text-xs text-netcare-charcoal font-bold uppercase tracking-wider pl-1" for="interest">Área de Interesse</label>
+                    <select id="interest" name="interest" class="w-full bg-netcare-grayLight border border-netcare-blue/10 rounded-xl p-3.5 text-netcare-charcoal text-sm focus:outline-none focus:border-netcare-blue focus:ring-1 focus:ring-netcare-blue transition-all appearance-none">
+                        <option value="tecnica">Suporte Técnico / Redes</option>
+                        <option value="comercial">Comercial / Vendas</option>
+                        <option value="atendimento">Atendimento ao Cliente</option>
+                        <option value="admin">Administrativo / Financeiro</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn"
+                    class="group relative w-full overflow-hidden rounded-xl bg-netcare-blue p-4 mt-2 font-bold text-white transition-all hover:bg-netcare-grayDark hover:shadow-lg hover:shadow-netcare-blue/30 active:scale-95">
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                        <span>Enviar Candidatura</span>
+                        <i class="ph-bold ph-paper-plane-right group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    </span>
+                </button>
+            </form>
+
+            <!-- Mensagem de Sucesso (Oculta por padrão) -->
+            <div id="successMessage" class="hidden flex-col items-center justify-center py-8 text-center">
+                <div class="w-16 h-16 bg-netcare-blueLight/20 rounded-full flex items-center justify-center mb-4">
+                    <i class="ph-bold ph-check text-3xl text-netcare-blue"></i>
+                </div>
+                <h4 class="text-xl font-extrabold text-netcare-blue mb-2">Currículo Enviado!</h4>
+                <p class="text-sm text-netcare-charcoal mb-6">Agradecemos seu interesse. Em breve nossa equipe de RH analisará suas informações.</p>
+                <button onclick="closeModal()" class="w-full py-3 bg-netcare-grayLight hover:bg-netcare-blueLight text-netcare-charcoal rounded-xl font-bold transition-colors">
+                    Fechar Janela
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts para controle do Modal e Formulário -->
+    <script>
+        const modal = document.getElementById('jobModal');
+        const modalContent = document.getElementById('jobModalContent');
+        const jobForm = document.getElementById('jobForm');
+        const successMessage = document.getElementById('successMessage');
+
+        function openModal() {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+            // Resetar form caso reabra
+            jobForm.reset();
+            jobForm.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+            successMessage.classList.remove('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+        }
+
+        // Fechar modal clicando fora dele
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        function submitJobForm(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerHTML;
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const linkedin = document.getElementById('linkedin').value.trim();
+            const interest = document.getElementById('interest').value;
+
+            const interestLabels = {
+                tecnica: 'Suporte Técnico / Redes',
+                comercial: 'Comercial / Vendas',
+                atendimento: 'Atendimento ao Cliente',
+                admin: 'Administrativo / Financeiro',
+                outros: 'Outros'
+            };
+
+            const messageText = `Olá, quero enviar meu curriculo para Netcare visando futuras oportunidades.%0A%0A` +
+                `Nome: ${encodeURIComponent(fullName)}%0A` +
+                `E-mail: ${encodeURIComponent(email)}%0A` +
+                `LinkedIn: ${encodeURIComponent(linkedin || 'Não informado')}%0A` +
+                `Área de Interesse: ${encodeURIComponent(interestLabels[interest] || interest)}`;
+
+            const whatsappPhone = '5544935052835';
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${messageText}`;
+
+            // Abrir WhatsApp com a mensagem preenchida
+            window.open(whatsappUrl, '_blank');
+
+            // Feedback visual no modal
+            btn.innerHTML = `<i class="ph ph-spinner animate-spin text-xl"></i> Enviando...`;
+            btn.disabled = true;
+            btn.classList.add('opacity-70');
+
+            setTimeout(() => {
+                jobForm.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                successMessage.classList.add('flex');
+                
+                // Restaurar botão para futuro uso
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-70');
+            }, 1000);
+        }
+
+        // --- Funcionalidades Premium ---
+
+        // 1. Partilha Nativa (Web Share API)
+        function shareProfile() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Netcare Soluções',
+                    text: 'Conecte-se ao futuro em alta velocidade com a Netcare!',
+                    url: window.location.href,
+                })
+                .catch((error) => console.log('Erro ao partilhar', error));
+            } else {
+                // Fallback: Copiar link
+                const dummy = document.createElement('input');
+                document.body.appendChild(dummy);
+                dummy.value = window.location.href;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                // Pode usar uma notificação visual aqui no lugar do alert se preferir
+                alert('Link copiado para a área de transferência!');
+            }
+        }
+
+        // 2. Controlar o Accordion (Menu Expansível)
+        function toggleAccordion(id) {
+            const accordion = document.getElementById(id);
+            const content = accordion.querySelector('.accordion-content');
+            
+            if (accordion.classList.contains('accordion-active')) {
+                accordion.classList.remove('accordion-active');
+                content.style.maxHeight = null;
+            } else {
+                // Fechar outros accordions abertos
+                document.querySelectorAll('.accordion-active').forEach(acc => {
+                    acc.classList.remove('accordion-active');
+                    acc.querySelector('.accordion-content').style.maxHeight = null;
+                });
+                
+                accordion.classList.add('accordion-active');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
+</body>
+</html>
